@@ -35,6 +35,17 @@ pip install chromadb sentence-transformers transformers torch
 
 🔧 How It Works
 
+---
+
+## 🔍 Major Components Explained
+
+- **Initializing ChromaDB**: Sets up a persistent vector store to save and retrieve document embeddings.
+- **Loading the Embedding Model**: Uses `sentence-transformers` like `all-MiniLM-L6-v2` to turn both FAQs and queries into dense vector embeddings.
+- **Embedding & Adding to DB**: Each document is transformed into a vector and stored with metadata for quick retrieval.
+- **Querying**: The query is also embedded and compared with the stored vectors to find semantically similar documents.
+- **Top-K Results**: Retrieves top 3 closest documents using cosine similarity and passes them to the LLM for answer generation.
+
+
 Initialize ChromaDB:
 Creates or loads a persistent vector store.
 
@@ -99,6 +110,11 @@ Context:
 User Question:
 Conceptual LLM Prompt:
 Question: Explain python's list data structure?
+
+## 💬 Why RAG is Better Than Standalone LLM
+
+A standalone LLM might hallucinate or give generic responses when it lacks context. This simple RAG system ensures the model always has access to relevant information from your documents, grounding its responses in actual data. It improves both **accuracy** and **trustworthiness** of the generated answers.
+
 
 
 🧩 Challenges Faced
