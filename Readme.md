@@ -37,7 +37,7 @@ pip install chromadb sentence-transformers transformers torch
 
 ---
 
-## 🔍 Major Components Explained
+##  Major Components Explained
 
 - **Initializing ChromaDB**: Sets up a persistent vector store to save and retrieve document embeddings.
 - **Loading the Embedding Model**: Uses `sentence-transformers` like `all-MiniLM-L6-v2` to turn both FAQs and queries into dense vector embeddings.
@@ -63,7 +63,7 @@ A user query is embedded and matched against stored vectors.
 Top-k Retrieval:
 The top 3 semantically closest documents are returned.
 
-📝 Sample FAQ List
+ Sample FAQ List
 
 faq_documents = [
     "What is Git? Git is a distributed version control system for tracking changes in source code during software development.",
@@ -71,8 +71,9 @@ faq_documents = [
     "What is a FastAPI endpoint? A FastAPI endpoint is a function decorated with an HTTP method (like `@app.get` or `@app.post`) that handles incoming web requests.",
     "Explain Python's `list` data structure. A list in Python is an ordered, mutable collection of items. It allows duplicate members and can contain items of different data types."
 ]
-❓ Example Queries & Results
-✅ Closest Match Retrieval
+
+ Example Queries & Results
+ Closest Match Retrieval
 Query: "How do I make a virtual environment?"
 Result: Closest matching FAQ
 
@@ -81,7 +82,7 @@ Result: Closest matching FAQ
 
 
 
-🧠 Generalization to Unseen Query
+ Generalization to Unseen Query
 Query: "How can I use GitHub for project collaboration?"
 Result: Best semantically matched answer, even though not explicitly in the docs.
 
@@ -89,7 +90,7 @@ Result: Best semantically matched answer, even though not explicitly in the docs
 ![alt text](images/r-2.PNG) 
 
 
-📚 Top 3 Results Retrieval
+ Top 3 Results Retrieval
 Query: "Explain Python's list data structure?"
 Returns top 3 closest documents with distance scores.
 
@@ -98,7 +99,7 @@ Returns top 3 closest documents with distance scores.
 
 
 
-💡 LLM Prompt Example
+ LLM Prompt Example
 
 You are a helpful assistant. Answer the user’s question based on the following context:
 
@@ -111,13 +112,13 @@ User Question:
 Conceptual LLM Prompt:
 Question: Explain python's list data structure?
 
-## 💬 Why RAG is Better Than Standalone LLM
+##  Why RAG is Better Than Standalone LLM
 
 A standalone LLM might hallucinate or give generic responses when it lacks context. This simple RAG system ensures the model always has access to relevant information from your documents, grounding its responses in actual data. It improves both **accuracy** and **trustworthiness** of the generated answers.
 
 
 
-🧩 Challenges Faced
+## Challenges Faced
 Choosing a light but accurate embedding model
 
 Ensuring ChromaDB persistence for future use
