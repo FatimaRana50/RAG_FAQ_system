@@ -64,6 +64,8 @@ faq_documents = [
 ✅ Closest Match Retrieval
 Query: "How do I make a virtual environment?"
 Result: Closest matching FAQ
+
+
 ![alt text](images/r-1.PNG) 
 
 
@@ -71,6 +73,8 @@ Result: Closest matching FAQ
 🧠 Generalization to Unseen Query
 Query: "How can I use GitHub for project collaboration?"
 Result: Best semantically matched answer, even though not explicitly in the docs.
+
+
 ![alt text](images/r-2.PNG) 
 
 
