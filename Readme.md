@@ -81,7 +81,7 @@ Result: Best semantically matched answer, even though not explicitly in the docs
 📚 Top 3 Results Retrieval
 Query: "Explain Python's list data structure?"
 Returns top 3 closest documents with distance scores.
-![alt text](images/r-13PNG) 
+![alt text](images/r-3PNG) 
 
 
 
