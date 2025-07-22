@@ -1,10 +1,10 @@
-# 🧠 RAG FAQ System
+#  RAG FAQ System
 
 This is a simple Retrieval-Augmented Generation (RAG) system that uses `ChromaDB`, `sentence-transformers`, and a local LLM to answer FAQs more accurately by retrieving semantically similar documents from a vector database.
 
 ---
 
-## 🚀 Features
+##  Features
 
 - Vector store powered by **ChromaDB**
 - Embedding using `sentence-transformers` (e.g., `all-MiniLM-L6-v2`)
@@ -14,7 +14,7 @@ This is a simple Retrieval-Augmented Generation (RAG) system that uses `ChromaDB
 
 ---
 
-## 🛠️ Installation
+##  Installation
 
 Install the required libraries:
 
