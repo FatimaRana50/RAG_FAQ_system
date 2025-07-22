@@ -33,7 +33,7 @@ pip install chromadb sentence-transformers transformers torch
 ├── RAG_Exercise_Report.md  # Detailed documentation (to be created)
 └── README.md
 
-🔧 How It Works
+
 
 ---
 
@@ -45,6 +45,7 @@ pip install chromadb sentence-transformers transformers torch
 - **Querying**: The query is also embedded and compared with the stored vectors to find semantically similar documents.
 - **Top-K Results**: Retrieves top 3 closest documents using cosine similarity and passes them to the LLM for answer generation.
 
+## How It Works
 
 Initialize ChromaDB:
 Creates or loads a persistent vector store.
@@ -72,7 +73,7 @@ faq_documents = [
     "Explain Python's `list` data structure. A list in Python is an ordered, mutable collection of items. It allows duplicate members and can contain items of different data types."
 ]
 
- Example Queries & Results
+ ## Example Queries & Results
  Closest Match Retrieval
 Query: "How do I make a virtual environment?"
 Result: Closest matching FAQ
@@ -82,7 +83,7 @@ Result: Closest matching FAQ
 
 
 
- Generalization to Unseen Query
+ ## Generalization to Unseen Query
 Query: "How can I use GitHub for project collaboration?"
 Result: Best semantically matched answer, even though not explicitly in the docs.
 
@@ -90,16 +91,16 @@ Result: Best semantically matched answer, even though not explicitly in the docs
 ![alt text](images/r-2.PNG) 
 
 
- Top 3 Results Retrieval
+ ## Top 3 Results Retrieval
 Query: "Explain Python's list data structure?"
-Returns top 3 closest documents with distance scores.
+Returns top 3 closest documents 
 
 
 ![alt text](images/r-3.PNG) 
 
 
 
- LLM Prompt Example
+## LLM Prompt Example
 
 You are a helpful assistant. Answer the user’s question based on the following context:
 
